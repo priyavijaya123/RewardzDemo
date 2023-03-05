@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mydatabaseapp.register.RegisterFragment">
+
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.rewardsdemo.viewmodel.RegisterViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cardView"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="110dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Quantum Wallet"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="23dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please Register in our App to \n Continue work with you're wallets"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="30dp"
+                android:layout_marginBottom="40dp"
+                android:foregroundGravity="clip_vertical|center_horizontal"
+                app:cardCornerRadius="30dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/first_name_text_field"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="@string/FirstNameTextField"
+                        app:hintTextColor="@color/colorPrimary"
+                        android:importantForAutofill="no"
+                        android:textAlignment="viewStart"
+                        android:textSize="14sp"
+                        android:layout_marginTop="20dp"
+
+
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColorHint="@color/design_default_color_on_secondary"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:text="@={myViewModel.inputFirstName}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/secondNameTextField"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="@string/SecondNameTextField"
+                        android:importantForAutofill="no"
+                        android:textAlignment="viewStart"
+                        android:textSize="14sp"
+                        android:layout_marginTop="20dp"
+                        app:hintTextColor="@color/colorPrimary"
+                        android:textColorHint="@color/design_default_color_on_secondary"
+
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/first_name_text_field">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@={myViewModel.inputLastName}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/userNameTextField"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="@string/UsernameTextField"
+                        android:importantForAutofill="no"
+                        android:textAlignment="viewStart"
+                        android:textSize="14sp"
+                        android:layout_marginTop="20dp"
+                        android:textColorHint="@color/design_default_color_on_secondary"
+
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/secondNameTextField">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@={myViewModel.inputUsername}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/passwordTextField"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:hint="@string/PasswordTextFiels"
+                        android:importantForAutofill="no"
+                        android:textAlignment="viewStart"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/design_default_color_on_secondary"
+
+                        android:layout_marginTop="20dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxStrokeColor="@color/colorPrimary"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userNameTextField">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@={myViewModel.inputPassword}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:background="@drawable/rounded_corner"
+                        android:textColor="@color/cardview_light_background"
+                        android:id="@+id/submitButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:padding="16dp"
+                        android:onClick="@{()->myViewModel.sumbitButton()}"
+                        android:text="@string/submitButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.498"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/passwordTextField" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+    </layout>
