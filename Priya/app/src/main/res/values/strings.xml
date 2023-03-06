@@ -19,6 +19,6 @@
     <string name="Login_button">Login</string>
     <string name="signupText">Sign Up!</string>
     <string name="QuantumWalletWelcome">Sign Up!</string>
-    <string name="Login_Long_Text">Pease Enter the UserName \n to Continue work with you're wallet</string>
+    <string name="Login_Long_Text">Pease Enter the UserName to Continue work with you're wallet</string>
 
 </resources>
